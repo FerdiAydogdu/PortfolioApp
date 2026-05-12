@@ -13,9 +13,7 @@ namespace PortfolioApp.Domain.Entities
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public string Slug { get; set; } = string.Empty;
-        public ICollection<ProjectSkill> ProjectSkills { get; set; }
-        = new List<ProjectSkill>();
-        public ICollection<ProjectCategory> ProjectCategories { get; set; }
-            = new List<ProjectCategory>();
+        public ICollection<ProjectSkill> ProjectSkills { get; set; } = new List<ProjectSkill>();
+        public ICollection<ProjectCategory> ProjectCategories { get; set; } = new List<ProjectCategory>();
     }
 }

@@ -8,7 +8,6 @@ namespace PortfolioApp.Domain.Entities
         public string? IconUrl { get; set; }
         public int ProficiencyLevel { get; set; }
 
-        public ICollection<ProjectSkill> ProjectSkills { get; set; }
-        = new List<ProjectSkill>();
+        public ICollection<ProjectSkill> ProjectSkills { get; set; } = new List<ProjectSkill>();
     }
 }

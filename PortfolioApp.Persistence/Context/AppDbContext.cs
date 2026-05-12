@@ -20,15 +20,11 @@ namespace PortfolioApp.Persistence.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<ProjectSkill>()
-                .HasKey(ps => new { ps.ProjectId, ps.SkillId });
+            modelBuilder.Entity<ProjectSkill>().HasKey(ps => new { ps.ProjectId, ps.SkillId });
 
-            modelBuilder.Entity<ProjectCategory>()
-                .HasKey(pc => new { pc.ProjectId, pc.CategoryId });
+            modelBuilder.Entity<ProjectCategory>().HasKey(pc => new { pc.ProjectId, pc.CategoryId });
 
-            modelBuilder.Entity<Project>()
-                .HasIndex(x => x.Slug)
-                .IsUnique();
+            modelBuilder.Entity<Project>().HasIndex(x => x.Slug).IsUnique();
         }
     }
 }
